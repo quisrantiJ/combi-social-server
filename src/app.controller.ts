@@ -4,7 +4,7 @@ import * as bcrypt from 'bcrypt';
 import { AuthService } from './auth/auth.service';
 import { LocalAuthGuard } from './auth/local-auth.guard';
 import { Public } from './decorators/public.decorator';
-import { UserDocument } from './schemas/user.schema';
+import { UserDocument } from './models/schemas/user.schema';
 import { UserService } from './user/user.service';
 import { CreateUserDto } from './user/dto/create-user.dto';
 

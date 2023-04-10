@@ -4,7 +4,7 @@ import { Model } from 'mongoose';
 
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
-import { Post, PostDocument } from '../schemas/post.schema';
+import { Post, PostDocument } from '../models/schemas/post.schema';
 
 @Injectable()
 export class PostService {

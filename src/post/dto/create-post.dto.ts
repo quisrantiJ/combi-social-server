@@ -1,3 +1,3 @@
-import { Post } from '../entities/post.entity';
+import { Post } from '../../models/entities/post.entity';
 
 export class CreatePostDto extends Post {}

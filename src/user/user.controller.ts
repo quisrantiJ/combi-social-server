@@ -13,7 +13,7 @@ import * as bcrypt from 'bcrypt';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UserService } from './user.service';
-import { UserDocument } from '../schemas/user.schema';
+import { UserDocument } from '../models/schemas/user.schema';
 
 @Controller('user')
 export class UserController {
