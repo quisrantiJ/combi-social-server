@@ -16,6 +16,22 @@ $ npm run environment:create
 $ npm install
 ```
 
+## Start mongo and create database
+
+Make sure to install mongo and mongosh
+
+```bash
+mongod [options]
+```
+
+```bash
+mongosh
+```
+
+```bash
+> use combi-social
+```
+
 ## Running the app
 
 ```bash
