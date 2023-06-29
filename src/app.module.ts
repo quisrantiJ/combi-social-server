@@ -9,6 +9,7 @@ import { JwtAuthGuard } from './auth/jwt-auth.guard';
 import { environment } from './environment/environment';
 import { PostModule } from './post/post.module';
 import { UserModule } from './user/user.module';
+import { CommentModule } from './comment/comment.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { UserModule } from './user/user.module';
     MongooseModule.forRoot(environment.connectionString),
     PostModule,
     UserModule,
+    CommentModule,
   ],
   controllers: [AppController],
   providers: [
