@@ -38,6 +38,14 @@ export class CommentService {
       .exec();
   }
 
+  findByPostId(post: string): Promise<CommentDocument[]> {
+    return this.commentModel
+      .find({ post })
+      .populate({ path: 'author' })
+      .populate({ path: 'post' })
+      .exec();
+  }
+
   async findOne(id: string): Promise<CommentDocument> {
     return this.commentModel
       .findById(id)

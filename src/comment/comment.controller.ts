@@ -6,6 +6,7 @@ import {
   Param,
   Patch,
   Post,
+  Query,
 } from '@nestjs/common';
 
 import { CommentService } from './comment.service';
@@ -23,8 +24,12 @@ export class CommentController {
   }
 
   @Get()
-  findAll(): Promise<CommentDocument[]> {
-    return this.commentsService.findAll();
+  findAll(@Query('postId') postId: string): Promise<CommentDocument[]> {
+    if (!postId) {
+      return this.commentsService.findAll();
+    }
+
+    return this.commentsService.findByPostId(postId);
   }
 
   @Get(':id')
