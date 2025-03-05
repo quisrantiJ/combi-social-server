@@ -6,13 +6,12 @@ import { AuthService } from './auth.service';
 import { JwtStrategy } from './jwt.strategy';
 import { LocalStrategy } from './local.strategy';
 import { UserModule } from '../user/user.module';
-import { environment } from 'src/environment/environment';
 
 @Module({
   imports: [
     JwtModule.register({
-      secret: environment.jwtSecret,
-      signOptions: { expiresIn: environment.jwtExpiration },
+      secret: process.env.JWT_SECRET,
+      signOptions: { expiresIn: process.env.JWT_EXPIRATION },
     }),
     UserModule,
     PassportModule,
